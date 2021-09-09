@@ -4,7 +4,7 @@ const Fs = require("fs")
 
 //Main
 async function init(){
-    const Proxies = Fs.readFileSync("./proxies.txt", "utf8")
+    const Proxies = Fs.readFileSync(`${__dirname}/proxies.txt`, "utf8")
 
     return new Promise(resolve =>{
         Request("https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all", function(err, res, body){
@@ -28,9 +28,9 @@ async function init(){
             }
 
             if(Proxies.length == 0){
-                Fs.writeFileSync("./proxies.txt", results, "utf8")
+                Fs.writeFileSync(`${__dirname}/proxies.txt`, results, "utf8")
             }else{
-                Fs.writeFileSync("./proxies.txt", `${Proxies}\n${results}`, "utf8")
+                Fs.writeFileSync(`${__dirname}/proxies.txt`, `${Proxies}\n${results}`, "utf8")
             }
 
             resolve()
@@ -39,7 +39,7 @@ async function init(){
 }
 
 function get(){
-    var Proxies = Fs.readFileSync("./proxies.txt", "utf8").split("\n")
+    var Proxies = Fs.readFileSync(`${__dirname}/proxies.txt`, "utf8").split("\n")
 
     Proxies = JSON.parse(JSON.stringify(Proxies).replace(/\\r/g, ""))
 
