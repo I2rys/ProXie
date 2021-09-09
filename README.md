@@ -1,6 +1,6 @@
 
 <h1 align="center">ProXie</h1>
-<h4 align="center">A really simple NodeJS module that can be used to make checkers & more proxyless</h4>
+<h4 align="center">A really simple NodeJS module that can be used to make checkers & more proxyless(HTTP/HTTPS)</h4>
 <p align="center">
 	<a href="https://github.com/I2rys/ProXie/blob/main/LICENSE"><img src="https://img.shields.io/github/license/I2rys/ProXie?style=flat-square"></img></a>
 	<a href="https://github.com/I2rys/ProXie"><img src="https://bettercodehub.com/edge/badge/I2rys/ProXie?branch=main"></a>
