@@ -18,13 +18,8 @@ NPM Packages:
 
     npm i request
     
-This NPM Package:
-
-    npm i proxie-i2rys
-    
-
-## Example
-Open example.js
+## Usage
+Check example.js
 
 ## License
 MIT © I2rys
